@@ -3,7 +3,7 @@ layout: post
 title: Operating System - Processes
 ---
 
-Will be writing about it
+In general process is a program in execution. When a system boots up many processes are started which are unknown to user. One of those processes can be to check whether new mail has been received or not if the user had installed mail client and so on. In any multiprogramming system the __CPU__ *switches* between multiple processes running them quickly for 10 or 100 milliseconds giving an illusion that it is running muliple processes which is generally referred as **pseudoparallelism** for a single core processor. In this post we will be discussing about process in detail in __Linux__ context. 
 
 <!-- ![_config.yml]({{ site.baseurl }}/images/config.png) -->
 
