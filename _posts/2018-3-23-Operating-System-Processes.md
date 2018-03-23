@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Processes and Threads
+title: Operating System - Processes
 ---
 
 Will be writing about it
