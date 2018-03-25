@@ -34,11 +34,12 @@ When a process had completed it's execution it would execute the system call __e
 
 ## Process States
 
-
+![_config.yml]({{ site.baseurl }}/images/process_states_linux_ibm.gif)
 
 ## References
 
-[1] Tanenbaum, Andrew S. *Modern operating system*. Pearson Education, Inc, 2009. 
+[1] Tanenbaum, Andrew S. *Modern operating system*. Pearson Education, Inc, 2009. <br>
+[2] Avinesh Kumar *TASK_KILLABLE: New process state in Linux*,  https://www.ibm.com/developerworks/linux/library/l-task-killable/
 
 <!-- ![_config.yml]({{ site.baseurl }}/images/config.png) -->
 
