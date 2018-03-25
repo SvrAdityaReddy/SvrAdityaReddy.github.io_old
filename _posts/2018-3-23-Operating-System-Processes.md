@@ -21,6 +21,8 @@ During System Initialization several processes are created. Some of them are cal
 
 Also if webserver is running on a system it could *fork* a process to handle new incoming request. If a process calls *fork* system call both parent and child process shares same text segment but child process gets a seperate copy of data, stack, heap segments. In somecases, the child process could execute __execve__ system call which would change the memory image and execute a new program. In some __UNIX__ implementations the parent and child process instead of sharing only the text segment could share entire memory space in such case memory is shared on __copy-on-write__. If either of them wants to modify memory that chunk of memory is copied first and then changes are made so that such changes are relected only to that particular process. So, here writable memory is not shared [1].
 
+For more information regarding creation of process using __fork__ system call and address space refer [Process Address Space](https://github.com/SvrAdityaReddy/RTOS/tree/master/Assignment_3/address_space_process)
+
 ## Process Termination
 
 A process can be terminated because of following conditions [1]
