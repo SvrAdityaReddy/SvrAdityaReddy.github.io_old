@@ -32,9 +32,38 @@ A process can be terminated because of following conditions [1]
 
 When a process had completed it's execution it would execute the system call __exit__. An error exit would occur is that if certain parameters provided to a process are invalid. A fatal error would occur if *divide by zero* occurs during the execution of process. A process can be killed by another process having certain privileges using __kill__ sytem call in __UNIX/Linux__.
 
-## Process States
+## Process States in Linux
+
+Here *process* is referred to as *task* and these terms are often interchangeable.
 
 ![_config.yml]({{ site.baseurl }}/images/process_states_linux_ibm.gif)
+
+* __TASK_RUNNING:__ The process is either running on CPU or waiting in a run queue to get scheduled [2].
+
+* __TASK_INTERRUPTIBLE:__ The process is sleeping and is waiting for an event to occur. The process is open to be interruptible by signals. On interrupted by signals or wake-up call it goes to __TASK_RUNNING__ state [2].
+
+* __TASK_UNINTERRUPTIBLE:__ This state is similar to __TASK_INTERRUPTIBLE__ state except that here process is not open to process signals it received. Because it might not be correct to interrupt the process as it might be in the middle of completing some important task. If the event it is waiting for had occured it has to be explicitly waken up by wake-up call [2]. 
+
+* __TASK_STOPPED:__ In this state process is stopped. This state would occur if process receives signals like __SIGSTOP__. The process is runnable on receipt of __SIGCONT__ signal [2].
+
+* __EXIT_ZOMBIE:__ The process arrives this state when the process has terminated and is waiting for the parent process to collect it's exit status which is busy somewhere else [2].
+
+* __EXIT_DEAD:__ This is the final state of process [2].
+
+## Implementation of Processes
+
+The operating system maintains a *process table* or *program control block (PCB)* to store the information like status of opened files, program counter, stack register, memory allocation, process state for each process [2].
+
+For each I/O class there is a location called __interrupt vector__ which contains the address of the interrupt service procedure. Suppose an interrupt occurs when a process is in execution the following steps are followed [2]
+
+1. Hardware stacks program counter, etc.
+2. Hardware loads new program counter from interrupt vector.
+3. Assembly-language procedure saves registers.
+4. Assembly-language procedure sets up new stack.
+5. C interrupt service runs (typically reads and buffers input).
+6. Scheduler decides which process is to run next.
+7. C procedure returns to the assembly code.
+8. Assembly-language procedure starts up new current process.
 
 ## References
 
