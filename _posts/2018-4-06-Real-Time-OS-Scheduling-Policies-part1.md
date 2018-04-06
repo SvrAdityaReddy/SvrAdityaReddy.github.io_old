@@ -27,11 +27,11 @@ In this mechanism the jobs are assigned priority depending on certain criterion 
 
 * __Earliest Deadline First (EDF)__
 
-        Here jobs which are are having earliest deadline are assigned highest priority.
+    Here jobs which are are having earliest deadline are assigned highest priority.
     
 * __Lowest Release Time (LRT)__
 
-        Here Release time refers to the time by which a job is ready for execution/scheduling. Jobs having the lowest release time are assigned highest priority.
+    Here Release time refers to the time by which a job is ready for execution/scheduling. Jobs having the lowest release time are assigned highest priority.
 
 * __Comparison between Clock Driven and Priority Driven__
 
