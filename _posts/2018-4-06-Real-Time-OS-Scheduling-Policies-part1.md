@@ -7,11 +7,11 @@ comments: true
 
 In this post we will be discussing three broad categories of scheduling mechanisms in Real-Time Systems briefly. They are
 
-1. Clock Driven 
+* Clock Driven 
 
-2. Weighted Round Robin
+* Weighted Round Robin
 
-3. Priority Driven
+* Priority Driven
 
 
 
@@ -39,9 +39,9 @@ In this mechanism the jobs are assigned priority depending on certain criterion 
 * __Comparison between Clock Driven and Priority Driven__
 
 
-|Clock Driven | Priority Driven |
-|----------|--------|
-|Here we need to know the release time, deadline, execution time of the job while designing it | Here we need to know the priority of the job |
-|Suitable for Hard Real Time Systems  |  Not suitable for Hard Real Time Systems
-|Not Suitable for application with varying time and resource requirements | Suitable for application with varying time and resource requirements |
-|Timing Behaviour is deterministic | Timing Behaviour is non-deterministic |
+| Clock Driven | Priority Driven |
+| ----------|--------|
+| Here we need to know the release time, deadline, execution time of the job while designing it | Here we need to know the priority of the job |
+| Suitable for Hard Real Time Systems  |  Not suitable for Hard Real Time Systems
+| Not Suitable for application with varying time and resource requirements | Suitable for application with varying time and resource requirements |
+| Timing Behaviour is deterministic | Timing Behaviour is non-deterministic |
