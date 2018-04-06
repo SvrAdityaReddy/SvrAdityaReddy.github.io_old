@@ -13,6 +13,9 @@ In this post we will be discussing three broad categories of scheduling mechanis
 
 3. Priority Driven
 
+
+
+
 1. __Clock Driven__
 
 This is also known as Time Driven scheduling. This is usually used in "Hard Real Time Systems". But in this approach the parameters of the job has to be known in advance. This approach works well when the execution time of the job is well known and is stable i.e the variance between two successful execution times of same job is very minimal.
@@ -34,6 +37,7 @@ In this mechanism the jobs are assigned priority depending on certain criterion 
     Here Release time refers to the time by which a job is ready for execution/scheduling. Jobs having the lowest release time are assigned highest priority.
 
 * __Comparison between Clock Driven and Priority Driven__
+
 
 |Clock Driven | Priority Driven |
 |----------|--------|
