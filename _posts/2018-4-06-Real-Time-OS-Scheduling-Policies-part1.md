@@ -39,7 +39,7 @@ In this mechanism the jobs are assigned priority depending on certain criterion 
 ## __Comparison between Clock Driven and Priority Driven__
 
 
-| Clock Driven | Priority Driven |
+| **Clock Driven** | **Priority Driven** |
 | ----------|--------|
 | Here we need to know the release time, deadline, execution time of the job while designing it | Here we need to know the priority of the job |
 | Suitable for Hard Real Time Systems  |  Not suitable for Hard Real Time Systems
