@@ -80,5 +80,5 @@ Since aperiodic jobs are executed when there is no periodic job executed in that
 
 One approach to increase the response time of system is to use "Slack Stealing". It is a method for scheduling aperiodic jobs. Here in "Slack Stealing" the aperiodic job starts executing from beginning of frame till periodic job that has to be executed has been released in the system.
 
-Apart from periodic jobs, aperiodic jobs there are another set of jobs known as "sporadic jobs". Sporadic jobs occur at random time and have hard deadline. Now, we will be discussing a scheduler whhich schedules sporadic jobs apart from scheduling periodic and aperiodic jobs.
+Apart from periodic jobs, aperiodic jobs there are another set of jobs known as "sporadic jobs". Sporadic jobs occur at random time and have hard deadline. Now, we will be discussing a scheduler which schedules sporadic jobs apart from scheduling periodic and aperiodic jobs.
  
