@@ -13,12 +13,13 @@ As discussed in the earlier [post](https://svradityareddy.github.io/Real-Time-OS
 
 Let us assume there are N tasks numbered from 0 to N-1 are to scheduled. Each task is denoted by Tk, "k" ranging from 0 to N-1. The pseudo algorithm is as follow.
 
-```{python}
+``` python
 
 def task_scheduler:
     k=0 # initialize k to 0
     i=0
-    set the timer to expire at tk, tk is the time at which next task has to be scheduled.
+    set the timer to expire at tk, tk is the time at which next task
+    has to be scheduled.
     i=i+1
     k=i*mod(N) # to calculate k which indicates the next task to be scheduled
     while(1):
