@@ -75,3 +75,10 @@ def cyclic_executive:
         sleep till_next clock interrupt
 
 ```
+
+Since aperiodic jobs are executed when there is no periodic job executed in that frame. The sooner the aperiodic job completes the better will be the response time of the system. So, it is important for Real Time System Designers to design such a way to minimize the average response time.
+
+One approach to increase the response time of system is to use "Slack Stealing". It is a method for scheduling aperiodic jobs. Here in "Slack Stealing" the aperiodic job starts executing from beginning of frame till periodic job that has to be executed has been released in the system.
+
+Apart from periodic jobs, aperiodic jobs there are another set of jobs known as "sporadic jobs". Sporadic jobs occur at random time and have hard deadline. Now, we will be discussing a scheduler whhich schedules sporadic jobs apart from scheduling periodic and aperiodic jobs.
+ 
