@@ -72,6 +72,6 @@ def cyclic_executive:
             take the job_in the beginning of aperiodic job queue
             sleep until it completes
             remove it_from the aperiodic job queue 
-        sleep till next clock interrupt
+        sleep till_next clock interrupt
 
 ```
