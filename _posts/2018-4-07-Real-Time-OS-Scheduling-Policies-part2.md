@@ -42,6 +42,36 @@ def task_scheduler:
 
 ```
 
+Here aperiodic jobs/tasks refer to jobs which occur at random time and have soft deadlines or no deadlines. Here "H" is the Hyper Period which will be discussed in further coming posts.
+
 In the before algorithm we are setting up a timer to interrupt. Instead of it we can can divide the timeline in to frames of frame size "f". "f" can be atleast greater than equal to maximum execution time of tasks. So, here scheduling decison is made at the beginning of each frame. Also, the scheduler has to monitor whether the job that is scheduled to be executed in that frame had been released i.e ready for execution and also to monitor that the job is completed within it's deadline.
 
 If the jobs execution time is too large we have to divide the job into slices inorder to achieve best performance and it would increase context switch time and increases the overhead.
+
+### Cyclic Executives
+
+This is a slight modification of native Clock Driven Scheduling mechanism discussed earlier. Here also scheduling decisions are made in the beginning of frames and allows aperiodic jobs to use the time not used by periodic jobs.
+
+Let us assume there are F blocks numbered from 0 to F-1. Each block is denoted by Lk, "k" ranging from 0 to F-1. The pseudo algorithm is as follow. Here block refers to a frame.
+
+``` python
+
+def cyclic_executive:
+    i=0
+    k=0 # refers to frame number
+    while(1):
+        Accept clock interrupt at time tf # tf is the frame size
+        current block = L(k)
+        i=i+1
+        k=i*mod(F)
+        if(last_job_is_not_completed):
+            take appropriate action
+        wake up the periodic task server to execute slices_in the current block
+        sleep until periodic task server completes
+        while(aperiodic_jobs_queue_is_not_empty):
+            take the job_in the beginning of aperiodic job queue
+            sleep until it completes
+            remove it_from the aperiodic job queue 
+        sleep till next clock interrupt
+
+```
