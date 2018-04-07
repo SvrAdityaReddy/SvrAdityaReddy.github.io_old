@@ -44,4 +44,4 @@ def task_scheduler:
 
 In the before algorithm we are setting up a timer to interrupt. Instead of it we can can divide the timeline in to frames of frame size "f". "f" can be atleast greater than equal to maximum execution time of tasks. So, here scheduling decison is made at the beginning of each frame. Also, the scheduler has to monitor whether the job that is scheduled to be executed in that frame had been released i.e ready for execution and also to monitor that the job is completed within it's deadline.
 
-If the jobs execution time is too large we have to divide it into slices inorder to achieve best performance and it would increase context switch time and increases the overhead.
+If the jobs execution time is too large we have to divide the job into slices inorder to achieve best performance and it would increase context switch time and increases the overhead.
