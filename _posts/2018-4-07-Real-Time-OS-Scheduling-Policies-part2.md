@@ -9,3 +9,4 @@ In this post we are going to discuss Clock Driven Scheduling mechanism which is 
 
 ## Clock Driven
 
+As discussed in the earlier [post]({{ site.baseurl }}/Real-Time-OS-Scheduling-Policies-part1/) This is also known as Time Driven scheduling. This is usually used in "Hard Real Time Systems". But in this approach the parameters of the job has to be known in advance. This approach works well when the execution time of the job is well known and is stable i.e the variance between two successful execution times of same job is very minimal.

@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am currently pursuing Integrated M.Tech. in field of IT and Embedded systems at IIIT Bangalore. I am interested in field of operating systems, Linux system programming, Linux Device Driver Development and Machine Learning.
+I am currently pursuing Integrated M.Tech. in field of IT and Embedded systems at IIIT Bangalore and looking for summer internship opportunities. I am interested in field of operating systems, Linux system programming, Linux Device Driver Development and Machine Learning.
 
 ### More Information
 
