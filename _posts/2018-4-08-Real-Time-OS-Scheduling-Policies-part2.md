@@ -81,4 +81,47 @@ Since aperiodic jobs are executed when there is no periodic job executed in that
 One approach to increase the response time of system is to use "Slack Stealing". It is a method for scheduling aperiodic jobs. Here in "Slack Stealing" the aperiodic job starts executing from beginning of frame till periodic job that has to be executed has been released in the system.
 
 Apart from periodic jobs, aperiodic jobs there are another set of jobs known as "sporadic jobs". Sporadic jobs occur at random time and have hard deadline. Now, we will be discussing a scheduler which schedules sporadic jobs apart from scheduling periodic and aperiodic jobs.
- 
+
+As soon as a sporadic job occurs the scheduler checks whether it there is a free time slot with in the frame so that sporadic job can be completed before it's deadline without causing any job in the system to complete too late. If such scenario exists it accepts the sporadic job and schedules it else it reject that sporadic job.
+
+EDF is a best way to schedule sporadic jobs. A queue is maintained by the scheduler which stores the jobs in increasing order of their deadlines. When a new sporadic job comes it is added to the sporadic job queue using the before mentioned criterion. Whenever the periodic jobs which are scheduled to be executed in that time frame are finished then sporadic job in the front of sporadic job queue is executed.
+
+Let us assume there are F blocks numbered from 0 to F-1. Each block is denoted by Lk, "k" ranging from 0 to F-1. The pseudo algorithm is as follow. Here block refers to a frame.
+
+``` python
+
+def cyclic_executive:
+    i=0
+    k=0 # refers to frame number
+    while(1):
+        Accept clock interrupt at time tf # tf is the frame size
+        current block = L(k)
+        i=i+1
+        k=i*mod(F)
+
+        if(last_job_is_not_completed):
+            take appropriate action
+
+        while(sporadic_job_waiting_queue_is_not_empty):
+            remove the job_in the head of the sporadic job waiting queue
+            do an acceptance test on the job
+            if(the job_is acceptable):
+                add it to the accepted_sporadic_job queue_in the EDF order.
+            else:
+                delete the job_and inform the application
+        wake up the periodic task server to execute slices_in the current block
+        sleep until periodic task server completes
+
+        while(sporadic_jobs_accepted_queue_is_not_empty):
+            take the job_in the beginning of sporadic_jobs_accepted_queue
+            sleep until it completes
+            remove it_from the sporadic_jobs_accepted_queue 
+
+        while(aperiodic_jobs_queue_is_not_empty):
+            take the job_in the beginning of aperiodic job queue
+            sleep until it completes
+            remove it_from the aperiodic job queue 
+            
+        sleep till_next clock interrupt
+
+```
