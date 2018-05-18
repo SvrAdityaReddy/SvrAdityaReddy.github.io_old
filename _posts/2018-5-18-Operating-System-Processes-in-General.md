@@ -96,7 +96,7 @@ __ORDINARY PIPES__:
 * Uni directional.
 * One process writes to one end of the pipe (write-end) and other process reads from the other end (read-end).
 
-Sampe code in C to implement *ls -l | more* using ordinary (unnamed) pipes in UNIX SYSTEMS
+Sampe code in C to implement __*ls -l | more*__ using ordinary (unnamed) pipes in UNIX SYSTEMS
 
 ```C
 int fd[2];
