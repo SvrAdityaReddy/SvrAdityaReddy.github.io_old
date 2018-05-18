@@ -46,12 +46,14 @@ It is important that the select good mix of I/O bound and CPU bound processes. B
 __CONTEXT SWITCH__:
 
 When an interrupt occurs or the scheduler wants to run other process the system needs to save the state of current context of running process namely in PCB and loading the state of process to be runned. So, switching CPU to another process requires performing a state save of the current process and a state restore of different process. This is known as “CONTEXT SWITCH”.
-PROCESS CREATION:
+
+__PROCESS CREATION__:
+
 In “Linux”, process can be created by “fork ()” system call.
 * Fork () returns pid of child process to parent process.
 * Fork () returns value of “O” to new process created.
 
-1) __When a parent forks a child process__
+__When a parent forks a child process__
 
 Child, parent can have different address spaces with same content copied and starts executing immediately after fork () function call. 
 
@@ -94,7 +96,7 @@ __ORDINARY PIPES__:
 * Uni directional.
 * One process writes to one end of the pipe (write-end) and other process reads from the other end (read-end).
 
-Sampe code in C to implement ls -l | more using ordinary (unnamed) pipes in UNIX SYSTEMS
+Sampe code in C to implement *ls -l | more* using ordinary (unnamed) pipes in UNIX SYSTEMS
 
 ```C
 int fd[2];
