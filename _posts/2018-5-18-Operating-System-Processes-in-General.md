@@ -13,23 +13,19 @@ It has the following components.
 3.	Data selection
 4.	Heap
 
-
-__TEXT SECTION__:
-* Program code + current activity like program counter and contents of processors registers
-__STACK__:
-*	Temporary data such as function parameters, local variables (auto, register variables in C), return addresses 
-__DATA SECTION__:
-*	Global variables
-__HEAP__:
-	Memory allocated during dynamic allocation.
+__TEXT SECTION__: Program code + current activity like program counter and contents of processors registers <br/>
+__STACK__: Temporary data such as function parameters, local variables (auto, register variables in C), return addresses <br/>
+__DATA SECTION__: Global variables <br/>
+__HEAP__: Memory allocated during dynamic allocation. <br/>
 
 
-PROCESS STATE IN GENERAL:
-__NEW__:   Process is being created.
-__RUNNING__: Instructions are being executed.
-__WAITING__:  Process is waiting for some event to occur/ to complete.
-__READY__:  Process has all resources allocated except C.P.U (i.e) waiting for to be attached to C.P.U
-__TERMINATED__:  Process has finished execution.
+__PROCESS STATE IN GENERAL__:
+
+__NEW__:   Process is being created. <br/>
+__RUNNING__: Instructions are being executed. <br/>
+__WAITING__:  Process is waiting for some event to occur/ to complete. <br/>
+__READY__:  Process has all resources allocated except C.P.U (i.e) waiting for to be attached to C.P.U <br/>
+__TERMINATED__:  Process has finished execution. <br/>
 
 
 Each process in an OS is represented by 
