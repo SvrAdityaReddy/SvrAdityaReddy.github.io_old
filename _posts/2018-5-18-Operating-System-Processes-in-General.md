@@ -50,8 +50,8 @@ When an interrupt occurs or the scheduler wants to run other process the system 
 __PROCESS CREATION__:
 
 In “Linux”, process can be created by “fork ()” system call.
-* Fork () returns pid of child process to parent process.
-* Fork () returns value of “O” to new process created.
+* fork () returns pid of child process to parent process.
+* fork () returns value of “O” to new process created.
 
 __When a parent forks a child process__
 
@@ -96,9 +96,12 @@ __ORDINARY PIPES__:
 * Uni directional.
 * One process writes to one end of the pipe (write-end) and other process reads from the other end (read-end).
 
-Sampe code in C to implement __*ls -l | more*__ using ordinary (unnamed) pipes in UNIX SYSTEMS
+Sampe code in C to implement using ordinary (unnamed) pipes in UNIX SYSTEMS
 
 ```C
+
+// ls -l | more
+
 int fd[2];
 pipe(fd);
 if (!fork()) {  
