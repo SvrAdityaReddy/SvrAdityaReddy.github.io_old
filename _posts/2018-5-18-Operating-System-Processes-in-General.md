@@ -27,6 +27,7 @@ __WAITING__:  Process is waiting for some event to occur/ to complete. <br/>
 __READY__:  Process has all resources allocated except C.P.U (i.e) waiting for to be attached to C.P.U <br/>
 __TERMINATED__:  Process has finished execution. <br/>
 
+![_config.yml]({{ site.baseurl }}/images/process_states.png)
 
 Each process in an OS is represented by 
 Process Control Block (P.C.B)
