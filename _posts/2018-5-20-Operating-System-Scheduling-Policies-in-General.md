@@ -56,7 +56,7 @@ __Scheduling in LINUX__
 * Completely Fair scheduler
 * Real-Time scheduler (FIFO, RR)
 
-Nice value is used to assign priority to a process in linux. Nice values ranges from -20 to +19. Lower nice value indicates a higher relative priority. Default nice value assigned to process is zero (0). By changing the nice value we can change the priority of a process in Linux. 
+Nice value is used to assign priority to a process in linux. Nice values ranges from -20 to +19. Lower nice value indicates a higher relative priority. Default priority value assigned to process is zero (0) i.e nice value will be -20. By changing the nice value we can change the priority of a process in Linux. 
 
 Priorities range in Linux is as below.
 
