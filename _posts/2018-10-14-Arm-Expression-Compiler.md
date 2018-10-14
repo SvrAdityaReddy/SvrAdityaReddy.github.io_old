@@ -17,12 +17,14 @@ generate the specific assembly instructions. These instructions are written to a
 simulated/debugged on uVision.
 
 # Tools used
-| Type | Name |
+
+| **Type** | **Name** |
 | ----------|--------|
 | Langauge | Python |
-| Package | PLY |
+| Package  |  PLY
 | Lexer | Lex |
 | Parser | Yacc |
+{:.mbtablestyle}
 
 # Implementation
 PLY stands for Python Lex and Yacc. It is a Python version of Lex and Yacc that has the same
