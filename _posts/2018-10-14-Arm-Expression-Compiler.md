@@ -23,7 +23,6 @@ simulated/debugged on uVision.
 | Package | PLY |
 | Lexer | Lex |
 | Parser | Yacc |
-{:.mbtablestyle}
 
 # Implementation
 PLY stands for Python Lex and Yacc. It is a Python version of Lex and Yacc that has the same
@@ -186,3 +185,5 @@ Seelapureddy Venkata Rama Aditya Reddy (https://github.com/SvrAdityaReddy) <br>
 [4] [The python plugin](https://docs.snapcraft.io/reference/plugins/python)<br>
 [5] [Python Apps the Right Way: entry points and scripts](https://chriswarrick.com/blog/2014/09/15/python-apps-the-right-way-entry_points-and-scripts/)<br>
 [6] [Interfaces reference](https://docs.snapcraft.io/reference/interfaces)
+
+{:.mbtablestyle}
