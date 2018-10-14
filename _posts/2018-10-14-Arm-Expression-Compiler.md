@@ -6,9 +6,6 @@ author: SvrAdityaReddy
 # other options
 ---
 
-[![Snap Status](https://build.snapcraft.io/badge/SvrAdityaReddy/Arm_Expression_Compiler.svg)](https://build.snapcraft.io/user/SvrAdityaReddy/Arm_Expression_Compiler)
-
-# Problem Statement
 To read expressions and statements from a text file and generate ARM assembly instructions
 that can be run directly on Keil uVision IDE. The assembly instructions are specific to a generic
 ARM Cotrex M4 device/board.
@@ -21,7 +18,7 @@ simulated/debugged on uVision.
 
 # Tools used
 | Type | Name |
-| ----------|-------- |
+| ----------|--------|
 | Langauge | Python |
 | Package | PLY |
 | Lexer | Lex |
@@ -152,6 +149,8 @@ dictionary of variable,value pairs
 ```
 
 # Snap
+
+[![Snap Status](https://build.snapcraft.io/badge/SvrAdityaReddy/Arm_Expression_Compiler.svg)](https://build.snapcraft.io/user/SvrAdityaReddy/Arm_Expression_Compiler)
 
 Now this is available as a snap package at [here](https://snapcraft.io/aec-arm/) <br>
 
