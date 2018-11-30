@@ -10,6 +10,8 @@ To read expressions and statements from a text file and generate ARM assembly in
 that can be run directly on Keil uVision IDE. The assembly instructions are specific to a generic
 ARM Cotrex M4 device/board.
 
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/aec-arm)
+
 # Abstract
 Expressions from the input source are read. Lexical analysis is performed on the expressions to
 obtain the appropriate tokens. Thereafter, parsing is done using pre-defined grammar rules to
@@ -173,8 +175,6 @@ $ aec-arm <input_file.txt>
 
 ```
 An output file will be generated with name as autogen.s in the current working directory which can be run on keil simulator on successful execution.
-
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/aec-arm)
 
 # Team
 
